@@ -1,0 +1,36 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Movie Theater</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="stage-background"></div>
+
+  <div class="theater">
+    <h1 class="title">🎬 My Movie Theater</h1>
+
+    <div class="scroll-container">
+      <div class="marquee">
+        Now Playing: The trailer of the most famous fantasy movie in 2025
+      </div>
+    </div>
+
+    <p class="intro">Enjoy the show! 🍿</p>
+
+    <div class="video-container">
+      <video controls>
+        <source src="Frozen_ Live Action - First Trailer _ Emilia Clarke.mp4" type="video/mp4">
+      </video>
+      <div class="buttons">
+<button onclick="document.querySelector('video').currentTime=0;document.querySelector('video').play();">Play Again</button>
+<button onclick="alert('Thanks For Rating!')">Rate Movei</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+

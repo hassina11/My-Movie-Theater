@@ -1,0 +1,124 @@
+Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+  font-family: 'Georgia', serif;
+  position: relative;
+  background-color: rgb(204, 212, 185);
+  overflow-x: hidden;
+  color: rgb(206, 202, 177);
+}
+
+.stage-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: linear-gradient(to bottom, #2d2c2c, #282626f1),
+                    url('https://www.transparenttextures.com/patterns/stardust.png');
+  background-size: cover;
+  background-blend-mode: overlay;
+  opacity: 0.95;
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.95; }
+}
+
+/* Content Container */
+.theater {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Title */
+.title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px #000;
+}
+
+/* Marquee Subtitle */
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  border: 2px solid rgb(205, 203, 171);
+  margin: 20px auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.marquee {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 22px;
+  animation: scrollText 15s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Intro Text */
+.intro {
+  font-size: 18px;
+  margin: 30px 0;
+  color: rgb(206, 199, 184);
+}
+
+/* Video Box with Blinking Border */
+.video-container {
+  margin: 0 auto;
+  width: fit-content;
+  padding: 10px;
+  background-color: black;
+  border-radius: 7px;
+  border: 5px solid rgb(220, 208, 140);
+  box-shadow: 0 0 150px rgb(229, 219, 169);
+ 
+}
+
+@keyframes flashBorder {
+  0%, 100% {
+    border-color: rgb(245, 240, 141);
+    box-shadow: 0 0 20px rgb(244, 250, 138);
+  }
+  50% {
+    border-color: transparent;
+    box-shadow: none;
+  }
+}
+
+video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+}
+button {
+   background: rgb(203, 200, 182); 
+   border: none;
+   padding: 5px 10px ;
+   font-size: 1rem;
+   margin: 5px;
+   cursor: pointer;
+   border-radius: 5px;
+}
+button:hover {
+background: #ffd700;
+}
